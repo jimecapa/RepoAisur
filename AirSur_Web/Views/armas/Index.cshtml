@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AirSur.AccesoADatos.arma>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.peso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cantidadMunicion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.marca.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipoArma.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.peso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cantidadMunicion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.marca.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipoArma.nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_arma }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_arma }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_arma })
+        </td>
+    </tr>
+}
+
+</table>
