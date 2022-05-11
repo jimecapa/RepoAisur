@@ -13,11 +13,11 @@ namespace AirSur.EntidadesDeNegocio
         [Key]
         public long Id_vehiculo { get; set; }
         public string Nombre { get; set; }
-        public int Cilindraje { get; set; }
-        public int CapacidadCargaMunicion { get; set; }
+        public int? Cilindraje { get; set; }
+        public int? CapacidadCargaMunicion { get; set; }
         //[ForeignKey("TipoVehiculo")]
-        public long IdTipoVehiculo_Fk { get; set; }
+        public long? IdTipoVehiculo_Fk { get; set; }
         //[ForeignKey("Marca")]
-        public long IdMarca_FK { get; set; }
+        public long? IdMarca_Fk { get; set; }
     }
 }
