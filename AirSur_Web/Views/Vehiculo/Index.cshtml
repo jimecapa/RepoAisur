@@ -1,0 +1,55 @@
+﻿@model IEnumerable<AirSur.AccesoADatos.vehiculo>
+
+@{ ViewBag.Title = "Index"; }
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cilindraje)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.capacidadCargaMunicion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipoVehiculo.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.marca.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.nombre)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.cilindraje)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.capacidadCargaMunicion)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.tipoVehiculo.nombre)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.marca.nombre)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.id_vehiculo }) |
+        @Html.ActionLink("Details", "Details", new { id = item.id_vehiculo }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.id_vehiculo })
+    </td>
+</tr>}
+
+</table>

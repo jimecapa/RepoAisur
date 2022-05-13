@@ -128,6 +128,7 @@
     <Compile Include="vehiculo.cs">
       <DependentUpon>AirSurModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="VehiculoDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AirSur.EntidadesDeNegocio\AirSur.EntidadesDeNegocio.csproj">
